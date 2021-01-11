@@ -1,6 +1,5 @@
 import os
 import time
-from PyInstaller import *
 if str(os.system('cmd /c pyinstaller -h')).endswith("'pyinstaller' is not recognized as an internal or external command,\noperable program or batch file.") == True:
     if str(os.system('cmd -c py -3 -m pip install pyinstaller')).endswith("'py' is not recognized as an internal or external command,\noperable program or batch file.") == True:
         print('python is not installed! Please go install it!')
