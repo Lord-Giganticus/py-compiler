@@ -1,7 +1,10 @@
 import os
 import time
 if str(os.system('cmd /c pyinstaller -h')).endswith("'pyinstaller' is not recognized as an internal or external command,\noperable program or batch file.") == True:
-    os.system('cmd -c py -3 -m pip install pyinstaller')
+    if str(os.system('cmd -c py -3 -m pip install pyinstaller')).endswith("'py' is not recognized as an internal or external command,\noperable program or batch file.") == True:
+        print('python is not installed! Please go install it!')
+        time.sleep(5)
+        exit()
 basename = os.path.basename(os.getcwd())
 folders = [basename]
 files = []
