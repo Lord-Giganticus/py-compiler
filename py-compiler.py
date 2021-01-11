@@ -1,5 +1,13 @@
 import os
 import time
+if os.path.dirname(os.getcwd()) != os.path.dirname(__file__):
+    print("py is not running in the script's directory.")
+    time.sleep(2)
+    print('It is currently running in "'+os.getcwd()+'".')
+    time.sleep(2)
+    print("Changing directory into the script's direcory.")
+    time.sleep(5)
+    os.chdir(os.path.dirname(__file__))
 if str(os.system('cmd /c pyinstaller -h')).endswith("'pyinstaller' is not recognized as an internal or external command,\noperable program or batch file.") == True:
     if str(os.system('cmd -c py -3 -m pip install pyinstaller')).endswith("'py' is not recognized as an internal or external command,\noperable program or batch file.") == True:
         print('python is not installed! Please go install it!')
@@ -37,14 +45,14 @@ if ico == 1:
         file_name = input('Enter the custom name you want(no spaces pls):\n')
         bat = open('compile.bat','w')
         bat.write('pyinstaller -F')
-        bat.write(' -i',ico_file)
-        bat.write(' -n',file_name)
+        bat.write(' -i '+ico_file)
+        bat.write(' -n '+file_name)
         bat.write(' '+py_file)
         bat.close()
     else:
         bat = open('compile.bat','w')
         bat.write('pyinstaller -F')
-        bat.write(' -i',ico_file)
+        bat.write(' -i '+ico_file)
         bat.write(' '+py_file)
         bat.close()
 elif ico == 2:
