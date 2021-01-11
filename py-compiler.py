@@ -53,12 +53,11 @@ bat.close()
 os.system('cmd /c compile.bat')
 os.remove('compile.bat')
 if name == 1:
-    print("Complete. File is in dist/"+file_name+'.exe')
+    print("Complete. File is in dist/"+file_name+'.exe which is inside the folder you chose.')
 else:
     os.chdir('dist')
     for file in os.listdir(os.getcwd()):
         if os.path.isfile(file) == True and file.startswith(os.path.splitext(py_file)) == True:
-            new_name = str(os.path.splitext(file))
-            print("Complete. File is in dist/"+new_name+'.exe')
+            print("Complete. File is in the dist folder which is inside the folder you chose.")
 time.sleep(10)
 exit()
