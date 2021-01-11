@@ -32,25 +32,45 @@ if ico == 1:
             ico_files.append(file)
     print(str(ico_files[:]))
     ico_file = str(input('Enter the EXACT name of the ico file you want:\n'))
-name = int(input('Do you want your file to have a custom name?\n[1]Yes\n[2]No\n'))
-if name == 1:
-    file_name = input('Enter the custom name you want(no spaces pls):\n')
-bat = open('compile.bat','w')
-bat.write('pyinstaller -F')
-if ico == 1:
-    bat.write(' -i',ico_file)
-if name == 1:
-    bat.write(' -n',file_name)
-bat.write(' '+py_file)
-bat.close()
+    name = int(input('Do you want your file to have a custom name?\n[1]Yes\n[2]No\n'))
+    if name == 1:
+        file_name = input('Enter the custom name you want(no spaces pls):\n')
+        bat = open('compile.bat','w')
+        bat.write('pyinstaller -F')
+        bat.write(' -i',ico_file)
+        bat.write(' -n',file_name)
+        bat.write(' '+py_file)
+        bat.close()
+    else:
+        bat = open('compile.bat','w')
+        bat.write('pyinstaller -F')
+        bat.write(' -i',ico_file)
+        bat.write(' '+py_file)
+        bat.close()
+elif ico == 2:
+    name = int(input('Do you want your file to have a custom name?\n[1]Yes\n[2]No\n'))
+    if name == 1:
+        file_name = input('Enter the custom name you want(no spaces pls):\n')
+        bat = open('compile.bat','w')
+        bat.write('pyinstaller -F')
+        bat.write(' -n',file_name)
+        bat.write(' '+py_file)
+        bat.close()
+    elif name == 2:
+        bat = open('compile.bat','w')
+        bat.write('pyinstaller -F')
+        bat.write(' '+py_file)
+        bat.close()
+    else:
+        print("Improper choice. Crashing the program.")
+        time.sleep(2)
+        exit()
+else:
+    print("Improper choice. Crashing the program.")
+    time.sleep(2)
+    exit()
 os.system('cmd /c compile.bat')
 os.remove('compile.bat')
-if name == 1:
-    print("Complete. File is in dist/"+file_name+'.exe which is inside the folder you chose.')
-else:
-    os.chdir('dist')
-    for file in os.listdir(os.getcwd()):
-        if os.path.isfile(file) == True and file.startswith(os.path.splitext(py_file)) == True:
-            print("Complete. File is in the dist folder which is inside the folder you chose.")
+print("Complete. File is in the dist folder which is inside the folder you chose.")
 time.sleep(10)
 exit()
