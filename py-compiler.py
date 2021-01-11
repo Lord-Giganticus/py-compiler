@@ -1,8 +1,17 @@
 import os
 import time
-from checker import checker
-checker.module.checker('pyinstaller')
-
+try:
+    from PyInstaller import *
+except:
+    print('pyinstaller is not installed. Attempting pip install.')
+    time.sleep(2)
+    os.system('cmd /c py -3 -m pip install pyinstaller')
+    try:
+        from PyInstaller import *
+    except:
+        print("Couldn't install pyinstaller! Check your internet connection and then rerun this program!")
+        time.sleep(5)
+        exit()
 basename = os.path.basename(os.getcwd())
 folders = [basename]
 files = []
