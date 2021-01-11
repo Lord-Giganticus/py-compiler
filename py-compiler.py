@@ -17,16 +17,16 @@ print(str(folders[:]))
 folder = input('Enter the EXACT name of the folder the py file you want to compile is in (note that the first folder is the folder py-compiler is in.):\n')
 if folder == basename:
     for file in os.listdir(os.getcwd()):
-        if os.path.isfile(file) == True and file.endswith('.py') == True and file != __file__:
+        if os.path.isfile(file) == True and file.endswith('.py') == True:
             files.append(file)
 else:
     os.chdir(folder)
     for file in os.listdir(os.getcwd()):
-        if os.path.isfile(file) == True and file.endswith('.py') == True and file != __file__:
+        if os.path.isfile(file) == True and file.endswith('.py') == True:
             files.append(file)
 print(str(files[:]))
 py_file = str(input('Enter the EXACT name of the py file you want to compile:\n'))
-ico = input('Will your program have a icon?\n[1]Yes\n[2]No\n')
+ico = int(input('Will your program have a icon?\n[1]Yes\n[2]No\n'))
 if ico == 1:
     for file in os.listdir(os.getcwd()):
         if os.path.isfile(file) == True and file.endswith('.ico') == True:
