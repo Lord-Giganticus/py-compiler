@@ -10,15 +10,17 @@ def process_exists(process_name): # From https://stackoverflow.com/a/29275361
     last_line = output.strip().split('\r\n')[-1]
     # because Fail message could be translated
     return last_line.lower().startswith(process_name.lower())
-if process_exists('py-compiler.exe') == False or process_exists('py.exe') == True:
-    if os.path.dirname(os.getcwd()) != os.path.dirname(__file__):
-        print("py.exe is not running in the script's directory.")
+if process_exists('py-compiler.exe') == False:
+    if os.getcwd() != os.path.dirname(__file__):
+        print("code is not running in the script's directory.")
         time.sleep(2)
         print('It is currently running in "'+os.getcwd()+'".')
         time.sleep(2)
         print("Changing directory into the script's direcory.")
         time.sleep(5)
         os.chdir(os.path.dirname(__file__))
+else:
+    pass
 if str(os.system('cmd /c pyinstaller -h')).endswith("'pyinstaller' is not recognized as an internal or external command,\noperable program or batch file.") == True:
     if str(os.system('cmd -c py -3 -m pip install pyinstaller')).endswith("'py' is not recognized as an internal or external command,\noperable program or batch file.") == True:
         print('python is not installed! Please go install it!')
