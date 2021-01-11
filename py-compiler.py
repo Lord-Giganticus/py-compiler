@@ -1,17 +1,7 @@
 import os
 import time
-try:
-    from PyInstaller import *
-except:
-    print('pyinstaller is not installed. Attempting pip install.')
-    time.sleep(2)
-    os.system('cmd /c py -3 -m pip install pyinstaller')
-    try:
-        from PyInstaller import *
-    except:
-        print("Couldn't install pyinstaller! Check your internet connection and then rerun this program!")
-        time.sleep(5)
-        exit()
+if str(os.system('cmd /c pyinstaller -h')).endswith("'pyinstaller' is not recognized as an internal or external command,\noperable program or batch file.") == True:
+    os.system('cmd -c py -3 -m pip install pyinstaller')
 basename = os.path.basename(os.getcwd())
 folders = [basename]
 files = []
