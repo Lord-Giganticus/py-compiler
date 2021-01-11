@@ -58,7 +58,7 @@ else:
     os.chdir('dist')
     for file in os.listdir(os.getcwd()):
         if os.path.isfile(file) == True and file.startswith(os.path.splitext(py_file)) == True:
-            new_name = os.path.splitext(file)
+            new_name = str(os.path.splitext(file))
             print("Complete. File is in dist/"+new_name+'.exe')
 time.sleep(10)
 exit()
