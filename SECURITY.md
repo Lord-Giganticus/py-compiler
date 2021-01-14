@@ -5,11 +5,10 @@
 Use this section to tell people about which versions of your project are
 currently being supported with security updates.
 
-Python Versioning;
+
 | Version | Supported          |
 | ------- | ------------------ |
 | 3.x     | :white_check_mark: |
-Windows Stuff:
 | Version | Supported          
 | ------- | ------------------ |
 | >= Version 10.0.18362.356| :white_check_mark: |
