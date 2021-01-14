@@ -1,5 +1,5 @@
 # py-compiler
-* ![Compiler](https://github.com/Lord-Giganticus/py-compiler/workflows/Compiler/badge.svg)
+* ![Compiler](https://github.com/Lord-Giganticus/py-compiler/workflows/Compiler/badge.svg?branch=main)
 * ![Releaser](https://github.com/Lord-Giganticus/py-compiler/workflows/Releaser/badge.svg)
 * ![Python application](https://github.com/Lord-Giganticus/py-compiler/workflows/Python%20application/badge.svg)
 * ![CodeQL](https://github.com/Lord-Giganticus/py-compiler/workflows/CodeQL/badge.svg)
