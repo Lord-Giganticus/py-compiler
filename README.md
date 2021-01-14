@@ -1,4 +1,5 @@
 # py-compiler
+![Python application](https://github.com/Lord-Giganticus/py-compiler/workflows/Python%20application/badge.svg?event=check_run)
 a simple program to easily compile .py files using pyinstaller.
 * Usage:
 `py -3 py-compiler.py` or run the exe in releases.
