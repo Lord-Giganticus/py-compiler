@@ -27,8 +27,10 @@ jobs:
         pip install -r requirements.txt
     - name: Compile py-compiler.py
       run: |
-        python -3 pyinstaller -F py-compiler.py
-        git commit -a -m "Compile py-compiler"
+        pyinstaller -F py-compiler.py
+        git config user.email "mrubins64@gmail.com"
+        git config user.name "Lord-Giganticus"
+        git commit -a -m "Compile py-compiler via Github Actions"
         git push    
     - name: Create Release
       run: |
