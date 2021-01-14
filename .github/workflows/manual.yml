@@ -1,4 +1,4 @@
-name: Auto-Release
+name: Auto-Compile
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -32,14 +32,3 @@ jobs:
         git config user.name "Lord-Giganticus"
         git commit -a -m "Compile py-compiler via Github Actions"
         git push    
-    - name: Create Release
-      run: |
-          echo "done!"
-    - uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        prerelease: false
-        title: "Latest Compile"
-        files: |
-          dist/py-compiler.exe
