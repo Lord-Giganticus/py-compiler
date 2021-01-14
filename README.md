@@ -1,5 +1,7 @@
 # py-compiler
-a simple program to easily compile .py files using pyinstaller.
+![Python application check](https://github.com/Lord-Giganticus/py-compiler/workflows/Python%20application/badge.svg)
+![CodeQL check](https://github.com/Lord-Giganticus/py-compiler/workflows/CodeQL/badge.svg)
+*a simple program to easily compile .py files using pyinstaller.*
 * Usage:
 `py -3 py-compiler.py` or run the exe in releases.
 * Requirements:
