@@ -1,7 +1,7 @@
 # py-compiler
-![Python application check](https://github.com/Lord-Giganticus/py-compiler/workflows/Python%20application/badge.svg)
-![CodeQL check](https://github.com/Lord-Giganticus/py-compiler/workflows/CodeQL/badge.svg)
-*a simple program to easily compile .py files using pyinstaller.*
+* ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Lord-Giganticus/py-compiler/Python%20application?label=flak8%20check)
+* ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Lord-Giganticus/py-compiler/CodeQL?label=CodeQL%20check)
+a simple program to easily compile .py files using pyinstaller.
 * Usage:
 `py -3 py-compiler.py` or run the exe in releases.
 * Requirements:
