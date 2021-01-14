@@ -1,3 +1,4 @@
+![Python application](https://github.com/Lord-Giganticus/py-compiler/workflows/Python%20application/badge.svg?event=check_run)
 # py-compiler
 a simple program to easily compile .py files using pyinstaller.
 * Usage:
@@ -7,4 +8,3 @@ a simple program to easily compile .py files using pyinstaller.
 2. pyinstaller `py -3 -m pip install pyinstaller`
 3. Windows 7 or higher (due to use of `os.system('cmd /c')`,`*.write()` and `open()`.)
 4. Windows 10 64 bit (for the exe file.)
-![Python application](https://github.com/Lord-Giganticus/py-compiler/workflows/Python%20application/badge.svg?event=check_run)
