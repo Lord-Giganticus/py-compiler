@@ -126,6 +126,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# Copier file I wrote to copy modules from ext
-copier.py
