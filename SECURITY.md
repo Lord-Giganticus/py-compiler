@@ -6,12 +6,11 @@ Use this section to tell people about which versions of your project are
 currently being supported with security updates.
 
 
-| Version | Supported          |
+| Python Version | Supported          |
 | ------- | ------------------ |
 | 3.x     | :white_check_mark: |
-| Version | Supported          
-| ------- | ------------------ |
-| >= Version 10.0.18362.356| :white_check_mark: |
+| Windows Version | Supported          |
+| >= Version 10.0.18362.356 | :white_check_mark: |
 ## Reporting a Vulnerability
 
 Use this section to tell people how to report a vulnerability.
