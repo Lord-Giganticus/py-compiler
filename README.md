@@ -1,4 +1,3 @@
-![Python application](https://github.com/Lord-Giganticus/py-compiler/workflows/Python%20application/badge.svg?event=check_run)
 # py-compiler
 a simple program to easily compile .py files using pyinstaller.
 * Usage:
